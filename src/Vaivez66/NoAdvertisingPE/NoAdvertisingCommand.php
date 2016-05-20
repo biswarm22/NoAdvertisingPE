@@ -18,8 +18,8 @@ class NoAdvertisingCommand extends PluginBase implements CommandExecutor{
 
     public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
         switch(strtolower($cmd->getName())){
-            case "na":
-                if($sender->hasPermission("no.advertising.pe")) {
+            case "nd":
+                if($sender->hasPermission("no.dating.pe")) {
                     if (isset($args[0])) {
                         switch ($args[0]) {
                             case "add":
