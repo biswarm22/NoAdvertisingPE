@@ -16,7 +16,7 @@ class NoAdvertising extends PluginBase{
 	$this->saveDefaultConfig();
 	$this->format = new NoAdvertisingFormat($this);
 	$this->cfg = new Config($this->getDataFolder() . "config.yml", Config::YAML, array());
-	$this->getServer()->getLogger()->info(TF::GREEN . "NoAdvertisingPE is ready!");
+	$this->getServer()->getLogger()->info(TF::GREEN . "NoDatingPE is ready!");
 	$this->getServer()->getPluginManager()->registerEvents(new NoAdvertisingListener($this), $this);
 	$this->getCommand("na")->setExecutor(new NoAdvertisingCommand($this));
     }
@@ -149,7 +149,7 @@ class NoAdvertising extends PluginBase{
     }
 	
     public function onDisable(){
-	$this->getServer()->getLogger()->info(TF::RED . "NoAdvertisingPE was disabled!");
+	$this->getServer()->getLogger()->info(TF::RED . "NoDatingPE was disabled!");
     }
 
 }
