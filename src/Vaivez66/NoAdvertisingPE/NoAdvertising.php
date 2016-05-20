@@ -88,7 +88,7 @@ class NoAdvertising extends PluginBase{
     public function addDomain($p, $name){
 	$domain = $this->getDomain();
 	if(in_array($name, $domain)){
-	    $p->sendMessage(TF::RED . "That domain already exist!");
+	    $p->sendMessage(TF::RED . "That word already exist!");
 	    return false;
 	}
 	$domain[] = $name;
@@ -108,7 +108,7 @@ class NoAdvertising extends PluginBase{
     	$domain = $this->getDomain();
     	$key = array_search($name, $domain);
     	if($key === false){
-    	    $p->sendMessage(TF::RED . "That domain does not exist!");
+    	    $p->sendMessage(TF::RED . "That word does not exist!");
     	    return false;
     	}
     	unset($domain[$key]);
@@ -125,7 +125,7 @@ class NoAdvertising extends PluginBase{
 
     public function listDomain($p){
 	$domain = implode("\n" . TF::YELLOW . "- ", $this->getDomain());
-	$p->sendMessage(TF::YELLOW . "Available domain:");
+	$p->sendMessage(TF::YELLOW . "Available words:");
 	$p->sendMessage(TF::YELLOW . "- " . $domain);
 	return true;
     }
