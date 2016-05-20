@@ -7,21 +7,17 @@ type: block
 # The message that will send
 # You can use {player} to mention their name
 message: '{RED}Do not try to advertising!'
-# Blocked domain names
+# Blocked dating words
 domain:
-  - ".me"
-  - ".com"
-  - ".net"
-# The domains that allowed to use
-allowed.domain:
-  - "yourserver.com"
-  - "pocketmine.net"
+  - "dating"
+  - "bf"
+  - "gf"
 # If true, it will detect a sign
 detect.sign: true
 # Lines that will change if player advertise on sign
 lines:
   - '============='
-  - 'No Advertising!'
+  - 'No Dating!'
   - '============='
   - ''
 # The command that will protected from advertising
