@@ -23,7 +23,7 @@ class NoAdvertisingListener implements Listener{
         $m = $this->plugin->getMsg();
         $m = str_replace("{player}", $p->getName(), $m);
         $m = $this->plugin->getFormat()->translate($m);
-        if($p->hasPermission('no.advertising.pe.bypass')){
+        if($p->hasPermission('no.dating.pe.bypass')){
             return;
         }
         foreach($allowed as $a){
@@ -55,7 +55,7 @@ class NoAdvertisingListener implements Listener{
             $lines = $event->getLines();
             $p = $event->getPlayer();
             $sign = $this->plugin->getSignLines();
-            if($p->hasPermission('no.advertising.pe.bypass')){
+            if($p->hasPermission('no.dating.pe.bypass')){
                 return;
             }
             foreach($lines as $line){
@@ -69,7 +69,7 @@ class NoAdvertisingListener implements Listener{
                         for ($i = 0; $i <= 3; $i++) {
                             $event->setLine($i, $sign[$i]);
                         }
-                        $p->sendMessage(TF::RED . 'Do not try to advertising, ' . $p->getName());
+                        $p->sendMessage(TF::RED . 'Do not use this server as a dating service, ' . $p->getName());
                     }
                 }
             }
@@ -81,7 +81,7 @@ class NoAdvertisingListener implements Listener{
         $cmd = array_shift($msg);
         $p = $event->getPlayer();
         $m = implode(' ', $msg);
-        if ($p->hasPermission('no.advertising.pe.bypass')) {
+        if ($p->hasPermission('no.dating.pe.bypass')) {
             return;
         }
         foreach ($this->plugin->getAllowedDomain() as $a) {
