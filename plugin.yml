@@ -1,5 +1,5 @@
 name: NoDatingPE
-main: Vaivez66\NoAdvertisingPE\NoAdvertising
+main: Vaivez66\NoDatingPE\NoDating
 version: 1.0.1
 api: [1.12.0, 2.0.0]
 load: POSTWORLD
